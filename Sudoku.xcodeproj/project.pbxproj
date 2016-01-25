@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		692BC3AE1C55251A00B69782 /* ImageUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = 692BC3AD1C55251A00B69782 /* ImageUtil.mm */; };
+		692BC3B11C552E9400B69782 /* GrayscalePreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 692BC3B01C552E9400B69782 /* GrayscalePreviewViewController.m */; };
+		692BC3B51C5531F800B69782 /* DetectorPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 692BC3B41C5531F800B69782 /* DetectorPreviewViewController.m */; };
+		692BC3BA1C55867800B69782 /* lbpcascade_frontalface.xml in Resources */ = {isa = PBXBuildFile; fileRef = 692BC3B91C55867800B69782 /* lbpcascade_frontalface.xml */; };
 		69EF131F1C5516CD0038C2B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69EF131E1C5516CD0038C2B4 /* main.m */; };
 		69EF13221C5516CD0038C2B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69EF13211C5516CD0038C2B4 /* AppDelegate.m */; };
-		69EF13251C5516CD0038C2B4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69EF13241C5516CD0038C2B4 /* ViewController.m */; };
+		69EF13251C5516CD0038C2B4 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 69EF13241C5516CD0038C2B4 /* ViewController.mm */; };
 		69EF13281C5516CD0038C2B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69EF13261C5516CD0038C2B4 /* Main.storyboard */; };
 		69EF132A1C5516CD0038C2B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69EF13291C5516CD0038C2B4 /* Assets.xcassets */; };
 		69EF132D1C5516CD0038C2B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69EF132B1C5516CD0038C2B4 /* LaunchScreen.storyboard */; };
 		69EF13381C5516CD0038C2B4 /* SudokuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69EF13371C5516CD0038C2B4 /* SudokuTests.m */; };
 		69EF13431C5516CD0038C2B4 /* SudokuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69EF13421C5516CD0038C2B4 /* SudokuUITests.m */; };
+		69F1621B1C55BBA600B3FE3C /* ThresholdPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F1621A1C55BBA600B3FE3C /* ThresholdPreviewViewController.m */; };
+		69F1621E1C55BBE700B3FE3C /* PreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69F1621D1C55BBE700B3FE3C /* PreviewViewController.m */; };
+		69F162201C55CB0E00B3FE3C /* haarcascade_frontalface_alt2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 69F1621F1C55CB0E00B3FE3C /* haarcascade_frontalface_alt2.xml */; };
+		8C842E5531E11E8B4EAD4DC7 /* libPods-Sudoku.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76F271BCBD0837F348443E23 /* libPods-Sudoku.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +43,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		41FA458277748E302B2DA70C /* Pods-Sudoku.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sudoku.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sudoku/Pods-Sudoku.release.xcconfig"; sourceTree = "<group>"; };
+		692BC3AC1C55251A00B69782 /* ImageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUtil.h; sourceTree = "<group>"; };
+		692BC3AD1C55251A00B69782 /* ImageUtil.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageUtil.mm; sourceTree = "<group>"; };
+		692BC3AF1C552E9400B69782 /* GrayscalePreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrayscalePreviewViewController.h; sourceTree = "<group>"; };
+		692BC3B01C552E9400B69782 /* GrayscalePreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrayscalePreviewViewController.m; sourceTree = "<group>"; };
+		692BC3B31C5531F800B69782 /* DetectorPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetectorPreviewViewController.h; sourceTree = "<group>"; };
+		692BC3B41C5531F800B69782 /* DetectorPreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetectorPreviewViewController.m; sourceTree = "<group>"; };
+		692BC3B91C55867800B69782 /* lbpcascade_frontalface.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = lbpcascade_frontalface.xml; sourceTree = "<group>"; };
 		69EF131A1C5516CD0038C2B4 /* Sudoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sudoku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69EF131E1C5516CD0038C2B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		69EF13201C5516CD0038C2B4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		69EF13211C5516CD0038C2B4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		69EF13231C5516CD0038C2B4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		69EF13241C5516CD0038C2B4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		69EF13241C5516CD0038C2B4 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		69EF13271C5516CD0038C2B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		69EF13291C5516CD0038C2B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69EF132C1C5516CD0038C2B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +67,14 @@
 		69EF133E1C5516CD0038C2B4 /* SudokuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SudokuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69EF13421C5516CD0038C2B4 /* SudokuUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SudokuUITests.m; sourceTree = "<group>"; };
 		69EF13441C5516CD0038C2B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69F162191C55BBA600B3FE3C /* ThresholdPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThresholdPreviewViewController.h; sourceTree = "<group>"; };
+		69F1621A1C55BBA600B3FE3C /* ThresholdPreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThresholdPreviewViewController.m; sourceTree = "<group>"; };
+		69F1621C1C55BBE700B3FE3C /* PreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreviewViewController.h; sourceTree = "<group>"; };
+		69F1621D1C55BBE700B3FE3C /* PreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreviewViewController.m; sourceTree = "<group>"; };
+		69F1621F1C55CB0E00B3FE3C /* haarcascade_frontalface_alt2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = haarcascade_frontalface_alt2.xml; path = ../../../Desktop/opencv/data/haarcascades/haarcascade_frontalface_alt2.xml; sourceTree = "<group>"; };
+		69F162211C55CF0000B3FE3C /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		6E1CCA189C123C9E680954D3 /* Pods-Sudoku.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sudoku.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sudoku/Pods-Sudoku.debug.xcconfig"; sourceTree = "<group>"; };
+		76F271BCBD0837F348443E23 /* libPods-Sudoku.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sudoku.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C842E5531E11E8B4EAD4DC7 /* libPods-Sudoku.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +103,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		243455E7E764F998CBAEF649 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69F162211C55CF0000B3FE3C /* CoreMotion.framework */,
+				76F271BCBD0837F348443E23 /* libPods-Sudoku.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		692BC3B21C552E9A00B69782 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				69EF13231C5516CD0038C2B4 /* ViewController.h */,
+				69EF13241C5516CD0038C2B4 /* ViewController.mm */,
+				692BC3AF1C552E9400B69782 /* GrayscalePreviewViewController.h */,
+				692BC3B01C552E9400B69782 /* GrayscalePreviewViewController.m */,
+				692BC3B31C5531F800B69782 /* DetectorPreviewViewController.h */,
+				692BC3B41C5531F800B69782 /* DetectorPreviewViewController.m */,
+				69F162191C55BBA600B3FE3C /* ThresholdPreviewViewController.h */,
+				69F1621A1C55BBA600B3FE3C /* ThresholdPreviewViewController.m */,
+				69F1621C1C55BBE700B3FE3C /* PreviewViewController.h */,
+				69F1621D1C55BBE700B3FE3C /* PreviewViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		69EF13111C5516CD0038C2B4 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +136,8 @@
 				69EF13361C5516CD0038C2B4 /* SudokuTests */,
 				69EF13411C5516CD0038C2B4 /* SudokuUITests */,
 				69EF131B1C5516CD0038C2B4 /* Products */,
+				8A944967B55C9F56501F1971 /* Pods */,
+				243455E7E764F998CBAEF649 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +154,11 @@
 		69EF131C1C5516CD0038C2B4 /* Sudoku */ = {
 			isa = PBXGroup;
 			children = (
+				692BC3AC1C55251A00B69782 /* ImageUtil.h */,
+				692BC3AD1C55251A00B69782 /* ImageUtil.mm */,
 				69EF13201C5516CD0038C2B4 /* AppDelegate.h */,
 				69EF13211C5516CD0038C2B4 /* AppDelegate.m */,
-				69EF13231C5516CD0038C2B4 /* ViewController.h */,
-				69EF13241C5516CD0038C2B4 /* ViewController.m */,
+				692BC3B21C552E9A00B69782 /* ViewControllers */,
 				69EF13261C5516CD0038C2B4 /* Main.storyboard */,
 				69EF13291C5516CD0038C2B4 /* Assets.xcassets */,
 				69EF132B1C5516CD0038C2B4 /* LaunchScreen.storyboard */,
@@ -117,6 +171,8 @@
 		69EF131D1C5516CD0038C2B4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				69F1621F1C55CB0E00B3FE3C /* haarcascade_frontalface_alt2.xml */,
+				692BC3B91C55867800B69782 /* lbpcascade_frontalface.xml */,
 				69EF131E1C5516CD0038C2B4 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -140,6 +196,15 @@
 			path = SudokuUITests;
 			sourceTree = "<group>";
 		};
+		8A944967B55C9F56501F1971 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6E1CCA189C123C9E680954D3 /* Pods-Sudoku.debug.xcconfig */,
+				41FA458277748E302B2DA70C /* Pods-Sudoku.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +212,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 69EF13471C5516CD0038C2B4 /* Build configuration list for PBXNativeTarget "Sudoku" */;
 			buildPhases = (
+				251139F933BD471C80B05162 /* Check Pods Manifest.lock */,
 				69EF13161C5516CD0038C2B4 /* Sources */,
 				69EF13171C5516CD0038C2B4 /* Frameworks */,
 				69EF13181C5516CD0038C2B4 /* Resources */,
+				DEFD0F3EF26C5FBB3AC5ABAF /* Embed Pods Frameworks */,
+				83C177985FD72CD23FA4830C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,7 +316,9 @@
 			files = (
 				69EF132D1C5516CD0038C2B4 /* LaunchScreen.storyboard in Resources */,
 				69EF132A1C5516CD0038C2B4 /* Assets.xcassets in Resources */,
+				69F162201C55CB0E00B3FE3C /* haarcascade_frontalface_alt2.xml in Resources */,
 				69EF13281C5516CD0038C2B4 /* Main.storyboard in Resources */,
+				692BC3BA1C55867800B69782 /* lbpcascade_frontalface.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,14 +338,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		251139F933BD471C80B05162 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		83C177985FD72CD23FA4830C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sudoku/Pods-Sudoku-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEFD0F3EF26C5FBB3AC5ABAF /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sudoku/Pods-Sudoku-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		69EF13161C5516CD0038C2B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69EF13251C5516CD0038C2B4 /* ViewController.m in Sources */,
+				692BC3AE1C55251A00B69782 /* ImageUtil.mm in Sources */,
+				692BC3B51C5531F800B69782 /* DetectorPreviewViewController.m in Sources */,
+				69EF13251C5516CD0038C2B4 /* ViewController.mm in Sources */,
+				69F1621E1C55BBE700B3FE3C /* PreviewViewController.m in Sources */,
 				69EF13221C5516CD0038C2B4 /* AppDelegate.m in Sources */,
 				69EF131F1C5516CD0038C2B4 /* main.m in Sources */,
+				692BC3B11C552E9400B69782 /* GrayscalePreviewViewController.m in Sources */,
+				69F1621B1C55BBA600B3FE3C /* ThresholdPreviewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,8 +535,10 @@
 		};
 		69EF13481C5516CD0038C2B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E1CCA189C123C9E680954D3 /* Pods-Sudoku.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Sudoku/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jchap.Sudoku;
@@ -423,8 +548,10 @@
 		};
 		69EF13491C5516CD0038C2B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41FA458277748E302B2DA70C /* Pods-Sudoku.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Sudoku/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jchap.Sudoku;
@@ -499,6 +626,7 @@
 				69EF13491C5516CD0038C2B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		69EF134A1C5516CD0038C2B4 /* Build configuration list for PBXNativeTarget "SudokuTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +635,7 @@
 				69EF134C1C5516CD0038C2B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		69EF134D1C5516CD0038C2B4 /* Build configuration list for PBXNativeTarget "SudokuUITests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +644,7 @@
 				69EF134F1C5516CD0038C2B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

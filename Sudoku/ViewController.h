@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <OpenCV/opencv2/videoio/cap_ios.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <CvVideoCameraDelegate, UIGestureRecognizerDelegate>
 
 
 @end
