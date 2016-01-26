@@ -11,9 +11,11 @@
 #import "GrayscalePreviewViewController.h"
 #import "ThresholdPreviewViewController.h"
 #import "DetectorPreviewViewController.h"
-#import <NSObject+Debounce/NSObject+Debounce.h>
+#import <TesseractOCR/TesseractOCR.h>
 
-@interface ViewController ()
+@interface ViewController () {
+    cv::CascadeClassifier _detector;
+}
 
 @property UIImageView *cameraImageView;
 @property UIScrollView *scrollView;
@@ -21,6 +23,7 @@
 @property DetectorPreviewViewController* detectorVc;
 @property ThresholdPreviewViewController* threshVc;
 @property CvVideoCamera *camera;
+@property NSOperationQueue *charRecQueue;
 
 @end
 
@@ -31,12 +34,30 @@
     [self initMainImageView];
     [self initCamera];
     [self initSlider];
+    [self initCharacterRecognitionQueue];
+//    [self initClassifier];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self.camera start];
 }
+
+- (void)initCharacterRecognitionQueue {
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    self.charRecQueue = queue;
+}
+
+//- (void)initClassifier {
+//    NSString *faceCascadePath = [[NSBundle mainBundle] pathForResource:@"cascade"
+//                                                                ofType:@"xml"];
+//    
+//    const CFIndex CASCADE_NAME_LEN = 2048;
+//    char *CASCADE_NAME = (char *) malloc(CASCADE_NAME_LEN);
+//    CFStringGetFileSystemRepresentation( (CFStringRef)faceCascadePath, CASCADE_NAME, CASCADE_NAME_LEN);
+//    
+//    _detector.load(CASCADE_NAME);
+//}
 
 - (void)initMainImageView {
     CGRect frame = self.view.frame;
@@ -57,13 +78,16 @@
 
 - (void)processImage:(cv::Mat &)image {
     int maxArea = 0;
+    double scale = 1.0f;
     cv::Mat original = image.clone();
-    cv::Mat gray, thresh, blur;
+    cv::Mat gray, thresh, blur, small(cvRound(original.rows/scale), cvRound(original.cols/scale), CV_8UC1);
     std::vector<cv::Rect> faces;
     cv::Scalar color = cv::Scalar(0, 255, 0);
     cvtColor(original, gray, cv::COLOR_BGR2GRAY);
-    cv::GaussianBlur(gray, blur, cv::Size(7, 7), 0.0f);
-    cv::adaptiveThreshold(blur, thresh, 255, 1, 1, 15, 2);
+    cv::resize(gray, small, small.size(), 0, 0, cv::INTER_LINEAR);
+    cv::equalizeHist(small, small);
+    cv::adaptiveThreshold(small, thresh, 255, cv::ADAPTIVE_THRESH_GAUSSIAN_C, cv::THRESH_BINARY, 11, 2);
+    std::vector<cv::Rect> rects;
     std::vector<std::vector<cv::Point>> contours;
     std::vector<cv::Vec4i> hierarchy;
     cv::findContours(thresh, contours, hierarchy, cv::RETR_TREE, cv::CHAIN_APPROX_NONE);
@@ -72,7 +96,7 @@
     for (int j = 0; j < contours.size(); j++) {
         double area = cv::contourArea(contours[j]);
         
-        if (area <= 100) {
+        if (area <= 900) {
             continue;
         }
         
@@ -102,13 +126,15 @@
             src[i] = cv::Point2f(biggest[i]);
         }
         
-        cv::warpPerspective(original,
+        cv::warpPerspective(gray,
                             undist,
                             cv::getPerspectiveTransform(src, dst),
                             cv::Size(300, 300));
         
+        UIImage* img = [[ImageUtil sharedUtil] uiImageFromCVMat:undist];
+        [_weakSelf detectCharacters:img];
+        
         dispatch_sync(dispatch_get_main_queue(), ^{
-            UIImage* img = [[ImageUtil sharedUtil] uiImageFromCVMat:undist];
             [_weakSelf.detectorVc frameReady:img];
         });
     }
@@ -117,6 +143,18 @@
         [_weakSelf.grayscaleVc frameReady:[[ImageUtil sharedUtil] uiImageFromCVMat:gray]];
         [_weakSelf.threshVc frameReady:[[ImageUtil sharedUtil] uiImageFromCVMat:thresh]];
     });
+}
+
+- (void)detectCharacters:(UIImage*)img {
+    G8RecognitionOperation *operation = [[G8RecognitionOperation alloc] initWithLanguage:@"eng"];
+    operation.tesseract.charWhitelist = @"123456789";
+    operation.tesseract.image = [img g8_blackAndWhite];
+    
+    operation.recognitionCompleteBlock = ^(G8Tesseract *recognizedTesseract) {
+        NSLog(@"%@", [recognizedTesseract recognizedText]);
+    };
+    
+    [self.charRecQueue addOperation:operation];
 }
 
 double angle(cv::Point pt1, cv::Point pt2, cv::Point pt0) {

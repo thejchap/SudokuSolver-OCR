@@ -1,22 +1,13 @@
 PODS:
-  - NSObject+Debounce (1.0.0)
   - OpenCV (3.0.0)
+  - TesseractOCRiOS (4.0.0)
 
 DEPENDENCIES:
-  - NSObject+Debounce (from `https://gist.github.com/maxgalbu/bec9cdb035051b0c4197.git`)
   - OpenCV (~> 3.0.0)
-
-EXTERNAL SOURCES:
-  NSObject+Debounce:
-    :git: https://gist.github.com/maxgalbu/bec9cdb035051b0c4197.git
-
-CHECKOUT OPTIONS:
-  NSObject+Debounce:
-    :commit: 81871f254545f8a9e60d0f2590385c666ed48a31
-    :git: https://gist.github.com/maxgalbu/bec9cdb035051b0c4197.git
+  - TesseractOCRiOS (= 4.0.0)
 
 SPEC CHECKSUMS:
-  NSObject+Debounce: ed74288b829123783faf0f639efdf390f28d9133
   OpenCV: be07c02f0d8f125f1d40d261e66a66cb66ece3b3
+  TesseractOCRiOS: 90638afbe43d082433f2e76b384c7901d23956df
 
 COCOAPODS: 0.39.0

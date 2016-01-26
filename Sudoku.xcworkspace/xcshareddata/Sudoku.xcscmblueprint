@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "36D738F18D8B77372DCDE2A099F498049E7FAD6B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "DE04DE2F7DEBE78586ED25CC854B6B7553F76B75" : 0,
+    "36D738F18D8B77372DCDE2A099F498049E7FAD6B" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "CD10F13E-BC2E-48DD-8EA3-5761E17AA5A1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "DE04DE2F7DEBE78586ED25CC854B6B7553F76B75" : "..\/Desktop\/opencv",
+    "36D738F18D8B77372DCDE2A099F498049E7FAD6B" : "Sudoku\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Sudoku",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Sudoku.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/thejchap\/SudokuSolver-OCR.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "36D738F18D8B77372DCDE2A099F498049E7FAD6B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Itseez\/opencv.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DE04DE2F7DEBE78586ED25CC854B6B7553F76B75"
+    }
+  ]
+}

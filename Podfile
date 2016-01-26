@@ -5,8 +5,7 @@
 
 target 'Sudoku' do
   pod 'OpenCV', '~> 3.0.0'
-  pod 'NSObject+Debounce',
-    git: 'https://gist.github.com/maxgalbu/bec9cdb035051b0c4197.git'
+  pod 'TesseractOCRiOS', '4.0.0'
 end
 
 target 'SudokuTests' do
